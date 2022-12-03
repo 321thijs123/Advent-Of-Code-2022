@@ -22,3 +22,15 @@ vector<vector<int>> readIntLists(string path) {
 
 	return ints;
 }
+
+vector<string> readStringList(string path) {
+	ifstream file(path);
+	string line;
+	vector<string> lines;
+
+	while (getline(file, line)) {
+		lines.push_back(line);
+	}
+
+	return lines;
+}
