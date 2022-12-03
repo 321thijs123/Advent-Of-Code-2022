@@ -1,4 +1,4 @@
-#include "part2.h"
+#include "day1-part1.h"
 
 #include "../readers.h"
 
@@ -7,10 +7,10 @@
 
 using namespace std;
 
-Day1P2::Day1P2(string filename) {
+Day1P1::Day1P1(string filename) {
 	vector<vector<int>> inventories = readIntLists(filename);
-
-	vector<int> sums;
+	
+	int max = 0;
 
 	for (vector<int> inv : inventories) {
 		int sum = 0;
@@ -19,10 +19,8 @@ Day1P2::Day1P2(string filename) {
 			sum += cal;
 		}
 
-		sums.push_back(sum);
+		if (sum > max) max = sum;
 	}
 
-	sort(sums.begin(), sums.end(), greater <>());
-
-	cout << sums[0] + sums[1] + sums[2];
+	cout << max;
 }
