@@ -34,3 +34,29 @@ vector<string> readStringList(string path) {
 
 	return lines;
 }
+
+vector<vector<int>> readIntMatrix(string path) {
+	ifstream file(path);
+	string line;
+	vector<vector<int>> table;
+
+	while (getline(file, line)) {
+		vector<int> row;
+		string num;
+
+		for (char c : line) {
+			if (c >= '0' && c <= '9') {
+				num.push_back(c);
+			}
+			else {
+				row.push_back(stoi(num));
+				num = "";
+			}
+		}
+
+		row.push_back(stoi(num));
+		table.push_back(row);
+	}
+
+	return table;
+}
