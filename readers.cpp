@@ -54,13 +54,13 @@ vector<vector<int>> readIntMatrix(string path, int offset) {
 
 	while (getline(file, line)) {
 		vector<int> row;
-		string num;
+		string num = "";
 
 		for (char c : line) {
 			if (c >= '0' && c <= '9') {
 				num.push_back(c);
 			}
-			else {
+			else if (num != "") {
 				row.push_back(stoi(num));
 				num = "";
 			}
