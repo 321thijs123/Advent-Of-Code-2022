@@ -4,11 +4,15 @@
 
 using namespace std;
 
-vector<vector<int>> readIntLists(string path) {
+vector<vector<int>> readIntLists(string path, int offset) {
 	ifstream file(path);
 	vector<vector<int>> ints;
 	vector<int> inner;
 	string line;
+
+	for (int i = 0; i < offset; i++) {
+		getline(file, line);
+	}
 
 	while (getline(file, line)) {
 		if (line != "") {
@@ -23,10 +27,14 @@ vector<vector<int>> readIntLists(string path) {
 	return ints;
 }
 
-vector<string> readStringList(string path) {
+vector<string> readStringList(string path, int offset) {
 	ifstream file(path);
 	string line;
 	vector<string> lines;
+
+	for (int i = 0; i < offset; i++) {
+		getline(file, line);
+	}
 
 	while (getline(file, line)) {
 		lines.push_back(line);
@@ -35,10 +43,14 @@ vector<string> readStringList(string path) {
 	return lines;
 }
 
-vector<vector<int>> readIntMatrix(string path) {
+vector<vector<int>> readIntMatrix(string path, int offset) {
 	ifstream file(path);
 	string line;
 	vector<vector<int>> table;
+
+	for (int i = 0; i < offset; i++) {
+		getline(file, line);
+	}
 
 	while (getline(file, line)) {
 		vector<int> row;
