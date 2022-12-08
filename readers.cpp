@@ -72,3 +72,25 @@ vector<vector<int>> readIntMatrix(string path, int offset) {
 
 	return table;
 }
+
+vector<vector<int>> readDigitMatrix(string path, int offset) {
+	ifstream file(path);
+	string line;
+	vector<vector<int>> matrix;
+
+	for (int i = 0; i < offset; i++) {
+		getline(file, line);
+	}
+
+	while (getline(file, line)) {
+		vector<int> row;
+
+		for (char c : line) {
+			row.push_back(c - '0');
+		}
+
+		matrix.push_back(row);
+	}
+
+	return matrix;
+}
