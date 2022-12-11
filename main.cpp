@@ -20,8 +20,10 @@
 #include "day9/day9-part2.h"
 #include "day10/day10-part1.h"
 #include "day10/day10-part2.h"
+#include "day11/day11-part1.h"
+#include "day11/day11-part2.h"
 
-//#define choiceOverride 102;
+//#define choiceOverride 112;
 
 using namespace std;
 
@@ -56,6 +58,8 @@ int main() {
 		case 92:	Day9P2("day9/input.txt");	break;	// Day 9 part 2
 		case 101:	Day10P1("day10/input.txt");	break;	// Day 10 part 1
 		case 102:	Day10P2("day10/input.txt");	break;	// Day 10 part 2
+		case 111:	Day11P1("day11/input.txt");	break;	// Day 11 part 1
+		case 112:	Day11P2("day11/input.txt");	break;	// Day 11 part 2
 		default:	cout << "This day does not exist (yet)";
 	}
 
