@@ -73,7 +73,7 @@ vector<vector<int>> readIntMatrix(string path, int offset) {
 	return table;
 }
 
-vector<vector<int>> readDigitMatrix(string path, int offset) {
+vector<vector<int>> readDigitMatrix(string path, int zero, int offset) {
 	ifstream file(path);
 	string line;
 	vector<vector<int>> matrix;
@@ -86,7 +86,7 @@ vector<vector<int>> readDigitMatrix(string path, int offset) {
 		vector<int> row;
 
 		for (char c : line) {
-			row.push_back(c - '0');
+			row.push_back(c - zero);
 		}
 
 		matrix.push_back(row);
