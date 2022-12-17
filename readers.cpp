@@ -57,7 +57,7 @@ vector<vector<int>> readIntMatrix(string path, int offset) {
 		string num = "";
 
 		for (char c : line) {
-			if (c >= '0' && c <= '9') {
+			if (c >= '0' && c <= '9' || c=='-') {
 				num.push_back(c);
 			}
 			else if (num != "") {
