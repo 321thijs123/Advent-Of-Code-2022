@@ -28,8 +28,10 @@
 #include "day13/day13-part2.h"
 #include "day14/day14-part1.h"
 #include "day14/day14-part2.h"
+#include "day15/day15-part1.h"
+#include "day15/day15-part2.h"
 
-//#define choiceOverride 142;
+//#define choiceOverride 152;
 
 using namespace std;
 
@@ -72,6 +74,8 @@ int main() {
 		case 132:	day13P2::assignment("day13/input.txt");	break;	// Day 13 part 2
 		case 141:	day14P1::assignment("day14/input.txt");	break;	// Day 14 part 1
 		case 142:	day14P2::assignment("day14/input.txt");	break;	// Day 14 part 2
+		case 151:	day15P1::assignment("day15/input.txt");	break;	// Day 15 part 1
+		case 152:	day15P2::assignment("day15/input.txt");	break;	// Day 15 part 2
 		default:	cout << "This day does not exist (yet)";
 	}
 
