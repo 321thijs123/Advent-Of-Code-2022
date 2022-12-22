@@ -11,5 +11,5 @@ namespace day18P2 {
 	int getArea(const vector<vector<vector<char>>> voxelmap, char c);
 	void show(const vector<vector<vector<char>>> voxelmap);
 	void generateSTL(const vector<vector<vector<char>>> voxelmap, char c);
-	string stlSquare(int x1, int y1, int z1, int x2, int y2, int z2, int x3, int y3, int z3, int x4, int y4, int z4, int n1, int n2, int n3);
+	string stlSquare(float x1, float y1, float z1, float x2, float y2, float z2, float x3, float y3, float z3, float x4, float y4, float z4, float n1, float n2, float n3);
 }
