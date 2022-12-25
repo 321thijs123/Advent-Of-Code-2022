@@ -34,12 +34,14 @@
 #include "day17/day17-part2.h"
 #include "day18/day18-part1.h"
 #include "day18/day18-part2.h"
+#include "day20/day20-part1.h"
+#include "day20/day20-part2.h"
 #include "day21/day21-part1.h"
 #include "day21/day21-part2.h"
 #include "day23/day23-part1.h"
 #include "day23/day23-part2.h"
 
-//#define choiceOverride 232;
+//#define choiceOverride 202;
 
 using namespace std;
 
@@ -88,6 +90,8 @@ int main() {
 		case 172:	day17P2::assignment("day17/input.txt");	break;	// Day 17 part 2
 		case 181:	day18P1::assignment("day18/input.txt");	break;	// Day 18 part 1
 		case 182:	day18P2::assignment("day18/input.txt");	break;	// Day 18 part 2
+		case 201:	day20P1::assignment("day20/input.txt"); break;	// Day 20 part 1
+		case 202:	day20P2::assignment("day20/input.txt"); break;	// Day 20 part 2
 		case 211:	day21P1::assignment("day21/input.txt"); break;	// Day 21 part 1
 		case 212:	day21P2::assignment("day21/input.txt"); break;	// Day 21 part 2
 		case 231:	day23P1::assignment("day23/input.txt"); break;	// Day 23 part 1
